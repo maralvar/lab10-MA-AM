@@ -13,7 +13,10 @@ def square_root(a):
         raise ValueError
 
 def hypotenuse(a, b):
-    return math.hypot(a, b)
+    try:
+        return math.hypot(a, b)
+    except:
+        raise ValueError
 
 def add(a, b):
 
