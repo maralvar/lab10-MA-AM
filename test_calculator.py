@@ -1,3 +1,7 @@
+# https://github.com/maralvar/lab10-MA-AM.git
+# Partner 1: Mario A Alvarez
+# Partner 2: Atreyu Morales
+
 import unittest
 from calculator import *
 
@@ -13,9 +17,17 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     # def test_multiply(self): # 3 assertions
     #     fill in code
+    def test_multiply(self):
+        self.assertEqual(mul(2, 5), 10)
+        self.assertEqual(mul(-2, 5), -10)
+        self.assertAlmostEqual(mul(2.5,5),12.5)
 
     # def test_divide(self): # 3 assertions
     #     fill in code
+    def test_divide(self):
+        self.assertRaises(ZeroDivisionError, div, 0, 5)
+        self.assertAlmostEqual(div(4, 10), 2.5)
+        self.assertEqual(div(1, -5), -5)
     # ##########################
 
     ######## Partner 2
@@ -39,9 +51,15 @@ class TestCalculator(unittest.TestCase):
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     logarithm(0, 5)
     #     fill in code
-
+    def test_log_invalid_argument(self):
+        with self.assertRaises(ValueError):
+            logarithm(0, 5)
     # def test_hypotenuse(self): # 3 assertions
     #     fill in code
+    def test_hypotenuse(self):
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertAlmostEqual(hypotenuse(1, 1), math.sqrt(2))
+        self.assertEqual(hypotenuse(5, 0), 5)
 
     # def test_sqrt(self): # 3 assertions
     #     # Test for invalid argument, example:
@@ -49,6 +67,11 @@ class TestCalculator(unittest.TestCase):
     #     #    square_root(NUM)
     #     # Test basic function
     #     fill in code
+    def test_sqrt(self):
+        with self.assertRaises(ValueError):
+            square_root(-1)
+        self.assertEqual(square_root(16), 4)
+        self.assertAlmostEqual(square_root(3), math.sqrt(3))
     ##########################
 
 # Do not touch this
