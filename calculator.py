@@ -1,3 +1,7 @@
+# https://github.com/maralvar/lab10-MA-AM.git
+# Partner 1: Mario A Alvarez
+# Partner 2: Atreyu Morales
+
 """
 calculator.py
 Defines functions used to create a simple calculator
