@@ -1,3 +1,7 @@
+# https://github.com/maralvar/lab10-MA-AM.git
+# Partner 1: Mario A Alvarez
+# Partner 2: Atreyu Morales
+
 """
 calculator.py
 Defines functions used to create a simple calculator
@@ -6,14 +10,21 @@ One function per operation, in order.
 """
 import math
 
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except:
+        raise ValueError
+
+def hypotenuse(a, b):
+    try:
+        return math.hypot(a, b)
+    except:
+        raise ValueError
+
 def add(a, b):
 
     result = a + b
-    return result
-
-def sub(a, b):
-
-    result = a - b
     return result
 
 def mul(a, b):
@@ -30,32 +41,14 @@ def div(a, b):
     result = b / a # raise ZeroDivisionError if a == 0
     return result
 
-def log(a, b):
-    return a + b
-
 def subtract(a, b):
     return a - b
-
-def multiply(a, b):
-    return a * b
-
 
 def logarithm(a, b):
     try:
         return math.log(b, a) # use math library/raise ValueError
     except:
         raise ValueError
-
-def exponent(a, b):
-    return a ** b
-
-    try:
-        result = math.log(a, b)# use math library + raise ValueError
-    except:
-
-       raise ValueError
-
-    return result
 
 def exp(a, b):
 
