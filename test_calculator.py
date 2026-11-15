@@ -7,7 +7,7 @@ from calculator import *
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-     def test_add(self): # 3 assertions
+    def test_add(self): # 3 assertions
 
          self.assertEqual(add(5, 5), 10)
 
@@ -21,13 +21,13 @@ class TestCalculator(unittest.TestCase):
 
 
 
-     def test_subtract(self): # 3 assertions
+    def test_subtract(self): # 3 assertions
 
-         self.assertEqual(sub(5, 5), 0)
+         self.assertEqual(subtract(5, 5), 0)
 
-         self.assertEqual(sub(-5, -5), 0)
+         self.assertEqual(subtract(-5, -5), 0)
 
-         self.assertAlmostEqual(sub(2.7, 5.6), -2.9)
+         self.assertAlmostEqual(subtract(2.7, 5.6), -2.9)
 
 
     # ##########################
@@ -49,28 +49,28 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-     def test_divide_by_zero(self): # 1 assertion
+    def test_divide_by_zero(self): # 1 assertion
 
          with self.assertRaises(ZeroDivisionError):
-            div(5, 0)
+            div(0, 5)
 
 
-     def test_logarithm(self): # 3 assertions
+    def test_logarithm(self): # 3 assertions
 
-        self.assertEqual(log(1, 10), 0)
+        self.assertEqual(logarithm(10, 1), 0)
 
-        self.assertEqual(log(1, math.e), 0)
+        self.assertEqual(logarithm(math.e, 1), 0)
 
-        self.assertEqual(log(math.e, math.e), 1)
-
-
+        self.assertEqual(logarithm(math.e, math.e), 1)
 
 
-     def test_log_invalid_base(self): # 1 assertion
+
+
+    def test_log_invalid_base(self): # 1 assertion
 
         with self.assertRaises(ValueError):
 
-            log(5, 0)
+            logarithm(5, 0)
 
     
     ######## Partner 1
